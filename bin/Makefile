@@ -41,8 +41,8 @@ ifeq ($(BUILD_OS), Linux)
   ifeq ($(TMINGW32), )
     TMINGW32 := $(shell which i586-mingw32msvc-gcc )
     ifeq ($(TMINGW32), )
-      CC=i686-w64-mingw32-gcc-4.6
-      STRIP=i686-w64-mingw32-ar-4.6
+      CC=i686-w64-mingw32-gcc
+      STRIP=i686-w64-mingw32-ar
     else
       CC=i586-mingw32msvc-gcc
       STRIP=i586-mingw32msvc-strip
