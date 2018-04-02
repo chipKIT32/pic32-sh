@@ -61,7 +61,8 @@ endif
 endif # target Mingw
 
 ifeq ($(BUILD_OS), Darwin)
-  EXTRAOPS=-isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch i386
+  MACOS_DEVELOPERDIR=/Developer
+  EXTRAOPS=-isysroot $(MACOS_DEVELOPERDIR)/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch i386
   ifeq ($(TARGET), linux)
     CC=i586-pc-linux-gcc
     STRIP=i586-pc-linux-strip
