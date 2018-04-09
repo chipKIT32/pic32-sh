@@ -195,6 +195,7 @@ chipkit-install: xc32-sh$(EXE) force_install
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-elfedit$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-g++$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-gcc$(EXE); \
+	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-gdb$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-ld$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-nm$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-objcopy$(EXE); \
