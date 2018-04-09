@@ -61,7 +61,8 @@ endif
 endif # target Mingw
 
 ifeq ($(BUILD_OS), Darwin)
-  EXTRAOPS=-isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch i386
+  MACOS_DEVELOPERDIR=/Developer
+  EXTRAOPS=-isysroot $(MACOS_DEVELOPERDIR)/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch i386
   ifeq ($(TARGET), linux)
     CC=i586-pc-linux-gcc
     STRIP=i586-pc-linux-strip
@@ -194,6 +195,7 @@ chipkit-install: xc32-sh$(EXE) force_install
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-elfedit$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-g++$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-gcc$(EXE); \
+	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-gdb$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-ld$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-nm$(EXE); \
 	  cp xc32-sh$(EXE) $(XC32_INSTALL)/bin/pic32-objcopy$(EXE); \
